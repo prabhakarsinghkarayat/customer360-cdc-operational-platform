@@ -1,0 +1,16 @@
+command:
+  - streamlit
+  - run
+  - app.py
+  - --server.address
+  - 0.0.0.0
+  - --server.port
+  - "8000"
+  - --server.headless
+  - "true"
+
+env:
+  - name: ENDPOINT_NAME
+    value: "projects/customer360-serving/branches/production/endpoints/primary"
+  - name: STREAMLIT_GATHER_USAGE_STATS
+    value: "false"
