@@ -38,6 +38,33 @@ flowchart TD
     J --> N["Pipeline Audit and Audit History"]
 ```
 
+### Databricks Lakeflow Pipeline
+
+The following screenshot shows the implemented Lakeflow pipeline and its transformation dependencies.
+
+![Customer360 Lakeflow Pipeline](docs/screenshots/lakeflow_pipeline.png)
+
+### Operational Workflow Orchestration
+
+The eight-task Databricks workflow runs the Lakeflow pipeline, validates Gold datasets, and synchronizes six analytical tables into Lakebase.
+
+![Customer360 Orchestration Workflow](docs/screenshots/customer360_orchestration_job.png)
+
+### Lakebase PostgreSQL Serving Layer
+
+Six Gold analytical datasets are synchronized into Databricks Lakebase to support interactive customer analytics.
+
+![Lakebase PostgreSQL Serving Tables](docs/screenshots/lakebase_synced_tables.png)
+
+### Customer360 Streamlit Application
+
+The Streamlit application provides customer search, customer profiles, RFM segmentation, order history, and item-level transaction details using Lakebase PostgreSQL.
+
+![Customer360 Dashboard](docs/screenshots/customer360_dashboard.png)
+
+![Customer360 Order Details](docs/screenshots/customer360_order_details.png)
+
+
 ### Technology Stack
 
 | Layer | Technology |
